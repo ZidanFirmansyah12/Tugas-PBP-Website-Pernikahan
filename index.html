@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Undangan pernikahan digital Mario &amp; Princess Peach">
+  <title>Mario &amp; Princess Peach — Wedding Invitation</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Pilihan suara (tampil pertama kali) -->
+  <div id="soundGate" class="sound-gate" role="dialog" aria-modal="true" aria-labelledby="soundGateText">
+    <p id="soundGateText" class="sound-gate-text">
+      Undangan ini dilengkapi musik latar.<br>
+      Aktifkan suara untuk pengalaman terbaik.
+    </p>
+    <div class="sound-gate-actions">
+      <button type="button" id="soundOn" class="sound-choice" aria-label="Suara menyala">
+        <i class="bi bi-volume-up-fill"></i>
+      </button>
+      <button type="button" id="soundOff" class="sound-choice" aria-label="Suara mati">
+        <i class="bi bi-volume-mute-fill"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Opening -->
+  <div id="opening" class="opening-screen">
+    <img src="assets/castle.svg" alt="" class="opening-castle">
+    <img src="assets/mushroom.svg" alt="" class="opening-decor decor-left">
+    <img src="assets/star.svg" alt="" class="opening-decor decor-right">
+    <div class="opening-card">
+      <p class="eyebrow">THE WEDDING OF</p>
+      <h1>Mario <span>&amp;</span> Peach</h1>
+      <p class="opening-date">20 • 06 • 2027</p>
+      <p class="guest-label">Kepada Yth.<br><strong id="guestName">Tamu Undangan</strong></p>
+      <button type="button" id="openInvitation" class="btn btn-gold px-4 py-3">Buka Undangan</button>
+    </div>
+  </div>
+
+  <!-- Main site -->
+  <main id="mainContent" class="d-none">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top wedding-nav">
+      <div class="container">
+        <a class="navbar-brand" href="#home">M <span>&amp;</span> P</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false" aria-label="Buka menu navigasi">
+          <span>☰</span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#couple">Mempelai</a></li>
+            <li class="nav-item"><a class="nav-link" href="#story">Cerita</a></li>
+            <li class="nav-item"><a class="nav-link" href="#event">Acara</a></li>
+            <li class="nav-item"><a class="nav-link" href="#gallery">Galeri</a></li>
+            <li class="nav-item"><a class="nav-link" href="#rsvp">RSVP</a></li>
+            <li class="nav-item"><a class="nav-link" href="#wishes">Ucapan</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hero section-pad">
+      <div class="hero-overlay"></div>
+      <div class="container position-relative">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-9">
+            <p class="eyebrow light">A FAIRYTALE WEDDING</p>
+            <h1 class="hero-title">Mario <em>&amp;</em> Peach</h1>
+            <p class="hero-subtitle">Together is our favorite place to be.</p>
+            <div class="hero-date">20 JUNE 2027</div>
+            <a href="#couple" class="scroll-hint">SCROLL TO EXPLORE ↓</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="intro section-pad has-decor">
+      <img src="assets/cloud.svg" alt="" class="decor d-none d-md-block" style="left:4%;top:14%;width:130px">
+      <img src="assets/cloud.svg" alt="" class="decor d-none d-md-block" style="right:5%;bottom:12%;width:110px">
+      <img src="assets/heart.svg" alt="" class="decor d-none d-md-block" style="right:12%;top:18%;width:42px">
+      <div class="container text-center">
+        <p class="eyebrow">WE ARE GETTING MARRIED</p>
+        <h2 class="section-title">A New Adventure Begins</h2>
+        <div class="gold-line"></div>
+        <p class="section-text mx-auto">
+          Dengan penuh kebahagiaan, kami mengundang keluarga dan sahabat
+          untuk menjadi bagian dari hari spesial ketika dua dunia bertemu
+          dan satu perjalanan baru dimulai.
+        </p>
+        <div class="toad-divider">
+          <img src="assets/star.svg" alt="">
+          <img src="assets/flower.svg" alt="">
+          <img src="assets/star.svg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <!-- Couple -->
+    <section id="couple" class="couple section-pad has-decor">
+      <img src="assets/cloud.svg" alt="" class="decor d-none d-md-block" style="left:3%;top:8%;width:140px">
+      <img src="assets/cloud.svg" alt="" class="decor d-none d-md-block" style="right:3%;top:55%;width:120px">
+      <img src="assets/heart.svg" alt="" class="decor d-none d-md-block" style="left:8%;bottom:10%;width:46px">
+      <div class="container">
+        <div class="text-center mb-5">
+          <p class="eyebrow">THE HAPPY COUPLE</p>
+          <h2 class="section-title">Mempelai</h2>
+          <div class="gold-line"></div>
+        </div>
+
+        <div class="couple-picker">
+          <button class="pick-btn" data-who="mario" aria-pressed="false" aria-controls="panel-mario">
+            <span class="avatar mario-avatar"><img src="assets/cap.svg" alt=""></span>
+            <span class="pick-name">Mario</span>
+            <small>Mempelai pria</small>
+          </button>
+          <span class="couple-and" aria-hidden="true">&amp;</span>
+          <button class="pick-btn" data-who="peach" aria-pressed="false" aria-controls="panel-peach">
+            <span class="avatar peach-avatar"><img src="assets/crown.svg" alt=""></span>
+            <span class="pick-name">Peach</span>
+            <small>Mempelai wanita</small>
+          </button>
+        </div>
+
+        <div class="couple-stage" aria-live="polite">
+          <p class="stage-hint">Klik salah satu mempelai untuk berkenalan</p>
+
+          <article class="char-panel" id="panel-mario" hidden>
+            <img class="char-img" src="assets/mario.png" alt="Mario melompat gembira">
+            <div class="person-card char-card is-mario">
+              <p class="person-role">THE GROOM</p>
+              <h3>Mario</h3>
+              <p class="person-desc">Sang petualang pemberani yang selalu siap menghadapi level apa pun, terutama level kehidupan bersama Peach.</p>
+              <ul class="char-tags"><li>Pemberani</li><li>Lompatan tinggi</li><li>Pecinta pasta</li></ul>
+              <p class="parents">Putra dari<br><strong>Mr. &amp; Mrs. Mario</strong></p>
+            </div>
+          </article>
+
+          <article class="char-panel is-reverse" id="panel-peach" hidden>
+            <img class="char-img" src="assets/peach.png" alt="Princess Peach tersenyum">
+            <div class="person-card char-card is-peach">
+              <p class="person-role">THE BRIDE</p>
+              <h3>Princess Peach</h3>
+              <p class="person-desc">Sang putri berhati hangat yang percaya bahwa setiap petualangan akan menjadi lebih indah jika dijalani bersama.</p>
+              <ul class="char-tags"><li>Hangat</li><li>Suka membuat kue</li><li>Pemimpin yang tenang</li></ul>
+              <p class="parents">Putri dari<br><strong>King &amp; Queen Peach</strong></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section id="story" class="story section-pad has-decor">
+      <img src="assets/mushroom.svg" alt="" class="decor d-none d-md-block" style="left:5%;top:35%;width:90px">
+      <img src="assets/star.svg" alt="" class="decor d-none d-md-block" style="right:6%;top:22%;width:80px">
+      <img src="assets/heart.svg" alt="" class="decor d-none d-md-block" style="right:9%;bottom:12%;width:44px">
+      <div class="container">
+        <div class="text-center mb-5">
+          <p class="eyebrow">OUR JOURNEY</p>
+          <h2 class="section-title">Cerita Kami</h2>
+          <div class="gold-line"></div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-icon"><img src="assets/mushroom.svg" alt=""></div>
+            <div class="timeline-content">
+              <span>LEVEL 01 • 2023</span>
+              <h3>First Encounter</h3>
+              <p>Petualangan pertama dimulai ketika Mario bertemu Peach. Tidak ada yang menyangka sebuah pertemuan sederhana akan menjadi awal cerita panjang.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon"><img src="assets/star.svg" alt=""></div>
+            <div class="timeline-content">
+              <span>LEVEL 02 • 2024</span>
+              <h3>Power Star</h3>
+              <p>Dari banyak petualangan, mereka belajar bahwa kebahagiaan bukan tentang mencapai akhir level, tetapi tentang siapa yang menemani perjalanan.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon"><img src="assets/ring.svg" alt=""></div>
+            <div class="timeline-content">
+              <span>FINAL LEVEL • 2027</span>
+              <h3>Forever Begins</h3>
+              <p>Setelah melewati berbagai level kehidupan, Mario dan Peach memutuskan untuk membuka chapter baru: menjadi pasangan untuk selamanya.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Countdown -->
+    <section class="countdown-section section-pad">
+      <div class="container text-center">
+        <p class="eyebrow light">COUNTDOWN TO OUR DAY</p>
+        <h2 class="section-title light-text">Ready, Player One?</h2>
+        <div id="countdown" class="countdown-grid">
+          <div><strong id="days">00</strong><span>Hari</span></div>
+          <div><strong id="hours">00</strong><span>Jam</span></div>
+          <div><strong id="minutes">00</strong><span>Menit</span></div>
+          <div><strong id="seconds">00</strong><span>Detik</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Event -->
+    <section id="event" class="event section-pad has-decor">
+      <img src="assets/flower.svg" alt="" class="decor d-none d-md-block" style="left:5%;top:12%;width:70px">
+      <img src="assets/flower.svg" alt="" class="decor d-none d-md-block" style="right:6%;bottom:10%;width:60px">
+      <img src="assets/star.svg" alt="" class="decor d-none d-md-block" style="right:10%;top:14%;width:56px">
+      <div class="container">
+        <div class="text-center mb-5">
+          <p class="eyebrow">SAVE THE DATE</p>
+          <h2 class="section-title">Waktu &amp; Tempat</h2>
+          <div class="gold-line"></div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-5">
+            <div class="event-card is-mario">
+              <div class="event-icon"><img src="assets/ring.svg" alt=""></div>
+              <p class="event-label">AKAD / WEDDING CEREMONY</p>
+              <h3>20 Juni 2027</h3>
+              <p>Minggu, 09.00 WIB</p>
+              <div class="event-location">
+                <strong>Peach Castle Ballroom</strong><br>
+                Mushroom Kingdom
+              </div>
+              <button type="button" class="btn btn-outline-gold mt-3" data-location="Peach Castle Ballroom, Mushroom Kingdom">Salin Lokasi</button>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="event-card is-peach">
+              <div class="event-icon"><img src="assets/flower.svg" alt=""></div>
+              <p class="event-label">RECEPTION</p>
+              <h3>20 Juni 2027</h3>
+              <p>Minggu, 11.00–14.00 WIB</p>
+              <div class="event-location">
+                <strong>Peach Castle Garden</strong><br>
+                Mushroom Kingdom
+              </div>
+              <button type="button" class="btn btn-outline-gold mt-3" data-location="Peach Castle Garden, Mushroom Kingdom">Salin Lokasi</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="gallery section-pad">
+      <div class="container">
+        <div class="text-center mb-5">
+          <p class="eyebrow">OUR MOMENTS</p>
+          <h2 class="section-title">Gallery</h2>
+          <div class="gold-line"></div>
+        </div>
+
+        <div class="row g-3 gallery-grid">
+          <div class="col-6 col-md-4"><img src="assets/gallery1.jpg" alt="Mario dan Peach" loading="lazy" role="button" tabindex="0"></div>
+          <div class="col-6 col-md-4"><img src="assets/gallery2.jpg" alt="Pernikahan di bulan" loading="lazy" role="button" tabindex="0"></div>
+          <div class="col-6 col-md-4"><img src="assets/gallery3.jpg" alt="Petualangan di atas blok" loading="lazy" role="button" tabindex="0"></div>
+          <div class="col-6 col-md-4"><img src="assets/gallery4.jpg" alt="Momen manis Mario dan Peach" loading="lazy" role="button" tabindex="0"></div>
+          <div class="col-6 col-md-4"><img src="assets/gallery5.jpg" alt="Peach's Castle" loading="lazy" role="button" tabindex="0"></div>
+          <div class="col-6 col-md-4"><img src="assets/gallery6.jpg" alt="Mario, Peach, dan Bowser berbusana pengantin" loading="lazy" role="button" tabindex="0"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section id="rsvp" class="rsvp section-pad has-decor">
+      <img src="assets/cloud.svg" alt="" class="decor d-none d-md-block" style="left:4%;top:10%;width:120px">
+      <img src="assets/heart.svg" alt="" class="decor d-none d-md-block" style="right:7%;top:16%;width:50px">
+      <img src="assets/mushroom.svg" alt="" class="decor d-none d-md-block" style="left:7%;bottom:10%;width:70px">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-7">
+            <div class="form-card">
+              <div class="text-center">
+                <p class="eyebrow">KINDLY RESPOND</p>
+                <h2 class="section-title">RSVP</h2>
+                <div class="gold-line"></div>
+                <p class="section-text">Mohon konfirmasi kehadiran agar kami dapat mempersiapkan hari spesial ini dengan sebaik-baiknya.</p>
+              </div>
+
+              <form id="rsvpForm" class="mt-4">
+                <div class="mb-3">
+                  <label for="rsvpName" class="form-label">Nama</label>
+                  <input id="rsvpName" type="text" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                  <label for="attendance" class="form-label">Kehadiran</label>
+                  <select id="attendance" class="form-select" required>
+                    <option value="">Pilih jawaban</option>
+                    <option>Hadir</option>
+                    <option>Tidak dapat hadir</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="guestCount" class="form-label">Jumlah tamu</label>
+                  <select id="guestCount" class="form-select">
+                    <option>1 orang</option>
+                    <option>2 orang</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-gold w-100 py-3">Kirim RSVP</button>
+              </form>
+              <div id="rsvpMessage" class="alert alert-success mt-3 d-none" role="status"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wishes -->
+    <section id="wishes" class="wishes section-pad has-decor">
+      <img src="assets/star.svg" alt="" class="decor d-none d-md-block" style="left:6%;top:12%;width:64px">
+      <img src="assets/heart.svg" alt="" class="decor d-none d-md-block" style="right:7%;top:20%;width:46px">
+      <img src="assets/star.svg" alt="" class="decor d-none d-md-block" style="right:5%;bottom:8%;width:50px">
+      <div class="container">
+        <div class="text-center mb-5">
+          <p class="eyebrow">SEND YOUR LOVE</p>
+          <h2 class="section-title">Ucapan &amp; Doa</h2>
+          <div class="gold-line"></div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-7">
+            <form id="wishForm" class="wish-form">
+              <input id="wishName" class="form-control mb-3" placeholder="Nama" aria-label="Nama" required>
+              <textarea id="wishText" class="form-control mb-3" rows="4" placeholder="Tulis ucapan..." aria-label="Ucapan" required></textarea>
+              <button type="submit" class="btn btn-gold">Kirim Ucapan</button>
+            </form>
+
+            <div id="wishList" class="wish-list mt-4"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing -->
+    <section class="closing section-pad">
+      <div class="container text-center">
+        <img src="assets/castle.svg" alt="Istana" class="closing-castle">
+        <p class="eyebrow">THANK YOU</p>
+        <h2 class="section-title">See You at the Castle!</h2>
+        <div class="gold-line"></div>
+        <p class="section-text mx-auto">
+          Merupakan suatu kebahagiaan bagi kami apabila Anda dapat hadir
+          dan memberikan doa restu di hari istimewa kami.
+        </p>
+        <h3 class="signature">Mario &amp; Peach</h3>
+        <p class="small text-muted">Made with love • Mushroom Kingdom</p>
+      </div>
+    </section>
+
+    <!-- Music button -->
+    <button type="button" id="musicButton" class="music-button" title="Musik" aria-label="Putar atau jeda musik" aria-pressed="false">♪</button>
+    <audio id="weddingMusic" loop preload="none">
+      <!-- Ganti assets/music.mp3 untuk memakai lagu lain -->
+      <source src="assets/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="brick-strip"></div>
+    <footer class="footer">
+      <p>Mario &amp; Princess Peach • Wedding Invitation</p>
+    </footer>
+  </main>
+
+  <div id="toast" class="toast-message" role="status" aria-live="polite"></div>
+
+  <!-- Lightbox Galeri (Bootstrap Modal) -->
+  <div class="modal fade" id="lightboxModal" tabindex="-1" aria-label="Galeri foto" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content lightbox-content">
+        <div class="lightbox-topbar">
+          <span id="lightboxCounter" class="lightbox-counter">1 / 6</span>
+          <div class="lightbox-tools">
+            <button type="button" id="lightboxFull" class="lightbox-btn" aria-label="Layar penuh">
+              <i class="bi bi-arrows-fullscreen"></i>
+            </button>
+            <button type="button" class="lightbox-btn" data-bs-dismiss="modal" aria-label="Tutup">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+        </div>
+
+        <button type="button" id="lightboxPrev" class="lightbox-nav lightbox-prev" aria-label="Foto sebelumnya">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+        <div class="lightbox-stage">
+          <img id="lightboxImg" src="" alt="">
+          <p id="lightboxCaption" class="lightbox-caption"></p>
+        </div>
+        <button type="button" id="lightboxNext" class="lightbox-nav lightbox-next" aria-label="Foto berikutnya">
+          <i class="bi bi-chevron-right"></i>
+        </button>
+
+        <div id="lightboxThumbs" class="lightbox-thumbs"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
