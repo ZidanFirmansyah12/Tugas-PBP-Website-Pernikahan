@@ -1,4 +1,4 @@
-# Mario & Princess Peach — Digital Wedding Invitation
+# Mario & Princess Peach Digital Wedding Invitation
 
 Project tugas HTML, CSS, Bootstrap, dan JavaScript.
 
