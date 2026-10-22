@@ -49,28 +49,10 @@ Tambahkan parameter `?to=` pada URL.
 Contoh:
 `index.html?to=Fahmi`
 
-## Upload ke GitHub Pages
-1. Buat repository baru di GitHub.
-2. Upload `index.html`, `style.css`, `script.js`, dan folder `assets`.
-3. Masuk ke Settings → Pages.
-4. Pilih branch `main` dan folder `/root`.
-5. Simpan.
-6. GitHub akan memberikan link website.
-
 ## Catatan tugas
 RSVP dan ucapan pada versi ini adalah demo front-end. Ucapan disimpan di browser
 menggunakan localStorage (bukan database online), sedangkan RSVP hanya menampilkan
 pesan konfirmasi.
-
-Untuk presentasi 15 menit, jelaskan:
-1. Struktur HTML
-2. Penggunaan Bootstrap
-3. CSS dan konsep warna
-4. JavaScript countdown
-5. JavaScript RSVP
-6. localStorage untuk ucapan
-7. Responsive design
-8. Cara deployment ke GitHub Pages
 
 ## Aset gambar
 Folder `assets/` berisi foto galeri (`gallery1.jpg`–`gallery6.jpg`), foto hero (`title.jpg`),
