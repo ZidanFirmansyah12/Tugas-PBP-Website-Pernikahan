@@ -20,7 +20,7 @@ Project tugas HTML, CSS, Bootstrap, dan JavaScript.
 
 ## Struktur folder
 ```
-mario-peach-wedding669/
+mario-peach-wedding/
 ├── index.html      # struktur halaman
 ├── style.css       # gaya, diurutkan sesuai urutan section di halaman
 ├── script.js       # logika, satu fungsi init per fitur
